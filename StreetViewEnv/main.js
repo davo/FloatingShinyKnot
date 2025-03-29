@@ -14,8 +14,8 @@ import {
 	TorusKnotGeometry,
 	DirectionalLight,
 	IcosahedronGeometry,
-} from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+} from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 import { EquirectangularToCubemap } from "./EquirectangularToCubemap.js";
 import { material } from "./Material.js";
 import { twixt } from "./deps/twixt.js";
@@ -126,17 +126,14 @@ texture.needsUpdate = true;
 const directLight = new DirectionalLight(0xffffff);
 scene.add(directLight);
 
-const backdrop = new Mesh(
-	new IcosahedronBufferGeometry(2, 3),
-	backdropMaterial,
-);
+const backdrop = new Mesh(new IcosahedronGeometry(2, 3), backdropMaterial);
 backdrop.rotation.y = Math.PI;
 scene.add(backdrop);
 
 const torus = new Mesh(
 	// new TorusKnotBufferGeometry(0.05, 0.015, 200, 36),
-	new TorusKnotBufferGeometry(0.05, 0.015, 400, 36, 1, 3), //, 4, 3),
-	// new IcosahedronBufferGeometry(0.05, 10),
+	new TorusKnotGeometry(0.05, 0.015, 400, 36, 1, 3), //, 4, 3),
+	// new IcosahedronGeometry(0.05, 10),
 	material,
 );
 scene.add(torus);
