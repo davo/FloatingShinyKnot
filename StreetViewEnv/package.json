@@ -8,6 +8,9 @@
     "build": "vite build",
     "preview": "vite preview"
   },
+	"dependecies": {
+		"three": "^0.138.0","
+	},
   "devDependencies": {
     "vite": "^5.4.10"
   }
