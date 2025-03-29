@@ -2,7 +2,7 @@ import {
   BackSide,
   GLSL3,
   RawShaderMaterial,
-} from "./third_party/three.module.js";
+} from 'three';
 
 const vertexShader = `precision highp float;
 

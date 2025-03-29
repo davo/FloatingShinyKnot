@@ -11,11 +11,11 @@ import {
 	Mesh,
 	CanvasTexture,
 	RepeatWrapping,
-	TorusKnotBufferGeometry,
+	TorusKnotGeometry,
 	DirectionalLight,
-	IcosahedronBufferGeometry,
-} from "./third_party/three.module.js";
-import { OrbitControls } from "./third_party/OrbitControls.js";
+	IcosahedronGeometry,
+} from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { EquirectangularToCubemap } from "./EquirectangularToCubemap.js";
 import { material } from "./Material.js";
 import { twixt } from "./deps/twixt.js";

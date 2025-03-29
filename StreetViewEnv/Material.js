@@ -3,7 +3,7 @@ import {
   RawShaderMaterial,
   TextureLoader,
   RepeatWrapping,
-} from "./third_party/three.module.js";
+} from 'three';
 
 const vertexShader = `precision highp float;
 
