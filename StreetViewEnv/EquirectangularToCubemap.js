@@ -6,9 +6,9 @@ import {
   LinearMipmapLinearFilter,
   BackSide,
   Mesh,
-  IcosahedronBufferGeometry,
+  IcosahedronGeometry,
   CubeReflectionMapping,
-} from "./third_party/three.module.js";
+} from 'three';
 
 function EquirectangularToCubemap(renderer) {
   this.renderer = renderer;
@@ -22,7 +22,7 @@ function EquirectangularToCubemap(renderer) {
     side: BackSide,
   });
 
-  this.mesh = new Mesh(new IcosahedronBufferGeometry(100, 4), this.material);
+  this.mesh = new Mesh(new IcosahedronGeometry(100, 4), this.material);
   this.mesh.scale.x = -1;
   this.scene.add(this.mesh);
 }
