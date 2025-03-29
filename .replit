@@ -7,3 +7,15 @@ channel = "stable-24_05"
 localPort = 5173
 externalPort = 8000
 exposeLocalhost = true
+
+[workflows]
+runButton = "Run Dev Server"
+
+[[workflows.workflow]]
+name = "Run Dev Server"
+author = 16668269
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "cd StreetViewEnv && npm run dev"
